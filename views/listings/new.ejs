@@ -1,0 +1,118 @@
+<% layout('/layouts/boilerplate') -%>
+
+<body>
+    <div class="row mt-3">
+        <div class="col-8 offset-2">
+            
+            <h3>Create a New Listing</h3>
+        <form method="POST" action="/listings" class="needs-validation"  novalidate>
+            <div class="mb-3">
+                <label for="title" class="form-label">Title</label>
+                <input 
+                    placeholder="Enter title" 
+                    name="listing[title]" 
+                    class="form-control" 
+                    type="text"
+                    required>
+                <div class="valid-feedback">
+                        Title looks good!
+                </div>
+                <div class="invalid-feedback">
+                    Please provide a valid Title.
+                  </div>
+    
+            </div>
+          
+            <div class="mb-3">
+                <label for="description" class="form-label">Description</label>
+                <textarea 
+                  placeholder="Enter description" 
+                  name="listing[description]"
+                  class="form-control" 
+                  required></textarea>
+                <div class="valid-feedback">
+                    Description looks good!
+                </div>
+                <div class="invalid-feedback">
+                Please provide a valid  Description.
+                </div>
+
+            </div>
+        
+            <div class="mb-3">
+                <label for="image" class="form-label">Image URL</label>
+                <input 
+                placeholder="Enter image URL/Link" 
+                name="listing[image][url]" 
+                type="text" class="form-control">
+
+                <div class="valid-feedback">
+                     URL looks good!
+                </div>
+                <div class="invalid-feedback">
+                Please provide a valid URL.
+                </div>
+            </div>
+            <div class="row">
+                <div class="mb-3 col-md-4">
+                    <label for="price" class="form-label">Price</label>
+                    <input 
+                        placeholder="1200" 
+                        name="listing[price]" 
+                        type="number" 
+                        class="form-control" required>
+                    <div class="valid-feedback">
+                           Decent Price!
+                    </div>
+                    <div class="invalid-feedback">
+                       Please provide a decent price.
+                    </div>
+                </div>
+                <div class="mb-3 col-md-8">
+                    <label for="country" class="form-label">Country</label>
+                    <input 
+                        placeholder="Enter country" 
+                        name="listing[country]" 
+                        type="text" class="form-control" required>
+
+                        
+                    <div class="valid-feedback">
+                            Good choice!
+                    </div>
+                    <div class="invalid-feedback">
+                       Please provide a valid Country.
+                    </div>
+        
+                </div>
+            </div>
+            
+            
+            <div class="mb-3">
+                <label for="location" class="form-label">Location</label>
+                <input 
+                    placeholder="Enter location" 
+                    name="listing[location]" 
+                    type="text" class="form-control" required>
+
+                <div class="valid-feedback">
+                        Location looks good!
+                </div>
+                <div class="invalid-feedback">
+                   Please provide a valid Location.
+                </div>
+                
+            </div>
+            
+            
+            
+       
+            <button class="btn btn-dark reserve mb-3 mt-3s" >Add</button>
+            
+    
+        </form>
+  
+
+        </div>
+    </div>
+   
+</body>
